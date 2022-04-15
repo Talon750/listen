@@ -11,6 +11,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  int _currentindex=0;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,6 +22,33 @@ class _MyAppState extends State<MyApp> {
           centerTitle: true,
     ),
         body: newPage(),
+        bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          currentIndex: _currentindex,
+          onTap: (int index){
+            setState(() {
+              this._currentindex=index;
+            });
+          },
+          items: [
+            BottomNavigationBarItem(
+                icon: Icon(Icons.music_note),
+                label: "listen",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.app_registration),
+              label: "source",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.settings),
+              label: "setting",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.share),
+              label: "share",
+            )
+          ],
+        ),
       ),
       theme: ThemeData(
   primarySwatch: Colors.lightBlue
