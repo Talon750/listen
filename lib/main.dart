@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 void main() {
   runApp(MyApp());
 }
@@ -43,29 +43,190 @@ class _newPageState extends State<newPage> {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child:Container(
-        child: Text(
-          '你好，flutter 1',
-          textDirection: TextDirection.ltr,
-          style: TextStyle(
-            fontSize: 40.0,
-            color: Colors.white,
-          ),
+
+        child: Column(
+          children:<Widget> [
+            Padding(padding: EdgeInsets.fromLTRB(0, 10, 0, 10)),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children:<Widget> [
+                NeumorphicButton(
+                  style: NeumorphicStyle(
+
+                    boxShape: NeumorphicBoxShape.roundRect(
+
+                      BorderRadius.circular(12),
+
+                    ),
+
+                    color: Colors.grey[200],
+
+                    shape: NeumorphicShape.flat,
+
+                  ),
+
+                  child: Container(
+
+                    color: Colors.grey[200],
+
+                    width: 80,
+
+                    height: 35,
+
+                    child: const Center(
+
+                      child: Text('btnf_1'),
+
+                    ),
+
+                  ),
+
+                  onPressed: () {},
+
+                ),
+
+                NeumorphicButton(
+                  style: NeumorphicStyle(
+
+                    boxShape: NeumorphicBoxShape.roundRect(
+
+                      BorderRadius.circular(12),
+
+                    ),
+
+                    color: Colors.grey[200],
+
+                    shape: NeumorphicShape.flat,
+
+                  ),
+
+                  child: Container(
+
+                    color: Colors.grey[200],
+
+                    width: 80,
+
+                    height: 35,
+
+                    child: const Center(
+
+                      child: Text('btnf_2'),
+
+                    ),
+
+                  ),
+
+                  onPressed: () {},
+
+                ),
+              ],
+            ),
+            Padding(padding: EdgeInsets.fromLTRB(0, 10, 0, 10)),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children:<Widget> [
+                NeumorphicButton(
+                  style: NeumorphicStyle(
+
+                    boxShape: NeumorphicBoxShape.roundRect(
+
+                      BorderRadius.circular(12),
+
+                    ),
+
+                    color: Colors.grey[200],
+
+                    shape: NeumorphicShape.flat,
+
+                  ),
+
+                  child: Container(
+
+                    color: Colors.grey[200],
+
+                    width: 80,
+
+                    height: 35,
+
+                    child: const Center(
+
+                      child: Text('btns_1'),
+
+                    ),
+
+                  ),
+
+                  onPressed: () {},
+
+                ),
+
+                NeumorphicButton(
+                  style: NeumorphicStyle(
+
+                    boxShape: NeumorphicBoxShape.roundRect(
+
+                      BorderRadius.circular(12),
+
+                    ),
+
+                    color: Colors.grey[200],
+
+                    shape: NeumorphicShape.flat,
+
+                  ),
+
+                  child: Container(
+
+                    color: Colors.grey[200],
+
+                    width: 80,
+
+                    height: 35,
+
+                    child: const Center(
+
+                      child: Text('btns_2'),
+
+                    ),
+
+                  ),
+
+                  onPressed: () {},
+
+                ),
+              ],
+
+            ),
+            Padding(padding: EdgeInsets.fromLTRB(0, 10, 0, 10)),
+            Neumorphic(
+
+              margin: const EdgeInsets.only(left: 18, right: 18, top: 2, bottom: 4),
+
+              style: NeumorphicStyle(
+
+              depth: NeumorphicTheme.embossDepth(context),
+
+              boxShape: const NeumorphicBoxShape.stadium(),
+
+              color: Colors.grey[200]),
+
+              padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 18),
+
+              child: const TextField(
+
+              decoration: InputDecoration.collapsed(hintText: '请输入URL'),
+
+                ),
+
+              ),
+          ],
+
         ),
-        width: 300.0,
-        height: 500.0,
-        decoration: BoxDecoration(
-          color: Colors.blue,
-          borderRadius: BorderRadius.all(Radius.circular(10.0)),
-          border: Border.all(
-            width: 5.0,
-            color: Colors.lightBlueAccent,
-          ),
-        ),
-      ),
-    );
+
+      );
   }
 }
+
 
 
 
