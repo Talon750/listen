@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -68,6 +69,12 @@ class newPage extends StatefulWidget {
 }
 
 class _newPageState extends State<newPage> {
+  int _p=0;
+  //TTSUtil t= TTSUtil();
+  List<IconData?> _categories = [
+      Icons.start,
+      Icons.pause,
+  ];
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -247,6 +254,52 @@ class _newPageState extends State<newPage> {
                 ),
 
               ),
+            Padding(padding: EdgeInsets.fromLTRB(0, 10, 0, 10)),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                NeumorphicButton(
+
+                  style: NeumorphicStyle(
+
+                    boxShape: NeumorphicBoxShape.roundRect(
+
+                      BorderRadius.circular(30),
+
+                    ),
+
+                    color: Colors.grey[200],
+
+                    shape: NeumorphicShape.flat,
+
+                  ),
+
+                  child: Container(
+                    color: Colors.grey[200],
+
+                    width: 100,
+
+                    height: 25,
+
+                    child: const Center(
+                      child:Icon (Icons.pause),
+
+                    ),
+
+                  ),
+
+                  onPressed: () {
+                    _p==0?1:0;
+                    if(_p==1){
+                      //t.speak("好了");
+                      //t.stop();
+                    }
+                  },
+
+                )
+              ],
+            )
+
           ],
 
         ),

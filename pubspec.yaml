@@ -32,7 +32,8 @@ dependencies:
 
 #一个ui包
   flutter_neumorphic: ^3.0.3
-
+#文字转语音的包
+  flutter_tts:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
