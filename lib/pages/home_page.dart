@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:listen/items/ListData.dart';
 const APPBAR_SCROLL_OFFSET=100;
 class HomePage extends StatefulWidget{
   @override
@@ -66,7 +67,7 @@ class _TabNavigator extends State<HomePage>{
                   ),
                   Container(
                     height: 800,
-                    child: ListTile(title: Text(resultString),),
+                    child: MyList(),
                   )
                 ],
               ),
@@ -82,6 +83,7 @@ class _TabNavigator extends State<HomePage>{
               child: Text('首页'),),
 
             ),
+
           ),
           ),
         ],
