@@ -59,17 +59,9 @@ class _TabNavigator extends State<HomePage>{
                 }
                 return false ;
               },
-              child: ListView(
-                children: [
-                  Container(
-                    height: 160,
-
-                  ),
-                  Container(
-                    height: 800,
-                    child: MyList(),
-                  )
-                ],
+              child: Container(
+                padding: EdgeInsets.only(top: 80),
+                child:MyList(),
               ),
             ),
           ),
@@ -77,7 +69,7 @@ class _TabNavigator extends State<HomePage>{
             opacity: appBarAlpha,
             child: Container(
             height: 80,
-            decoration: BoxDecoration(color: Colors.white),
+            decoration: BoxDecoration(color: Colors.blue),
             child: Center(
               child: Padding(padding: EdgeInsets.only(top: 20),
               child: Text('首页'),),
